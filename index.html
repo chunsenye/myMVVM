@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myMVVM</title>
+</head>
+<body>
+    <script src="YCS.js"></script>
+    <script src="compile.js"></script>
+    <div id="app">
+        text1
+        <input type="text" ycs-model="t1">
+        <div class="a">
+            <p>子节点</p>
+        </div>
+        <ul>
+            <li>
+                <p>子节点的子节点</p>
+            </li>
+        </ul>
+    </div>
+    <script>
+       let ycs = new YCS({
+           el:'#app',
+           data:{
+               t1:'test1'
+           }
+       })
+    </script>
+</body>
+</html>
